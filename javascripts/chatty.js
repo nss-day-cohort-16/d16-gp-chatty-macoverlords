@@ -1,4 +1,4 @@
-"use strict"
+"use strict";
 var Chatty = (function () {
     var messages = [];
     return {
@@ -14,3 +14,4 @@ var Chatty = (function () {
     };
 })();
 console.log("chatty", Chatty );
+
