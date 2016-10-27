@@ -8,11 +8,17 @@ theme.addEventListener("click" , makeDark);
 textLarge.addEventListener("click" , makeBig);
 
 function makeDark(event){
-	if ({this.getAttribute("class") == "normal")
-         this.setAttribute("class", "change")
-     }  else
-         this.setAttribute("class", "normal");
-   };
+	if(event){
+		body.style.backgroundColor="dimgrey";
+		nav.style.backgroundColor="black";
+		nav.style.color="white";
+	}
+	else if(event){
+		body.style.backgroundColor="white";
+		nav.style.backgroundColor="white";
+		nav.style.color="black";
+	}	
+}
 
 function makeBig(event){
 	 if(event){
