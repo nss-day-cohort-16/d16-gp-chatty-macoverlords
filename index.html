@@ -8,9 +8,9 @@
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
-<body>
+<body id="body">
     <!-- make navBar sticky -->
-    <nav class="navbar navbar-default navbar-fixed-top">
+    <nav class="navbar navbar-default navbar-fixed-top" id="nav">
         <div id="navBar">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
@@ -28,7 +28,7 @@
                     <form class="navbar-form navbar-left">
                         <div class="form-group">
                             <input id="messageField" type="text" name="message" placeholder="Get Chatty" size="100"> </div>
-                        <button type="submit" class="btn btn-default">Submit</button>
+                        <button id="submit" type="submit" class="btn btn-default">Submit</button>
                         <button class="clear-messages btn btn-default" id="clearBtn">Clear Message Board</button>
                     </form>
                     <div id="themesBox">
@@ -55,6 +55,7 @@
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="javascripts/chatty.js"></script>
+    <script src="javascripts/theme.js"></script>
 </body>
 
 </html>
