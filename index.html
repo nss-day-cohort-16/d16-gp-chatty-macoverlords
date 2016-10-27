@@ -1,30 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-	<meta charset="UTF-8">
-	<title>Chatty</title>
+    <meta charset="UTF-8">
+    <title>Chatty</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
+
 <body>
-<!-- make navBar sticky -->
-<nav>
-	<div id="navBar">
-		<input id="messageField" type="text" name="message" placeholder="Get Chatty" size="100">
-		<!-- add keypress event to create message -->
-		<button class="clear-messages" id="clearBtn">Clear Message Board</button>
-		<!-- add event target to remove all children of textarea parent when clicked disable one area is cleared -->
-	</div>
-</nav>
-	<div id="themesBox">
-	<!-- toggle with classList -->
-		<input id="darkTheme" type="checkbox">Dark Theme
-		<input id="largeText" type="checkbox">Large Text
-	</div>
-	<h3>Messages:</h3>
-		<div id="messageArea">
-			<!-- populate with 5 messages on load event
+    <!-- make navBar sticky -->
+    <nav>
+        <div id="navBar">
+            <!-- <input id="messageField" type="text" name="message" placeholder="Get Chatty" size="100"> -->
+            <!-- add keypress event to create message -->
+            <!-- add event target to remove all children of textarea parent when clicked disable one area is cleared -->
+        </div>
+    </nav>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+            <!-- Brand and toggle get grouped for better mobile display -->
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                    <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#">Brand</a>
+            </div>
+            <!-- Collect the nav links, forms, and other content for toggling -->
+            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                <form class="navbar-form navbar-left">
+                    <div class="form-group">
+                        <input id="messageField" type="text" name="message" placeholder="Get Chatty" size="100"> </div>
+                    <button type="submit" class="btn btn-default">Submit</button>
+                    <button class="clear-messages btn btn-default" id="clearBtn">Clear Message Board</button>
+                </form>
+                <div id="themesBox">
+                    <!-- toggle with classList -->
+                    </br>
+                    </br>
+                    <input id="darkTheme" type="checkbox">Dark Theme
+                    </br>
+                    <input id="largeText" type="checkbox">Large Text
+                </div>
+            </div>
+            <!-- /.navbar-collapse -->
+        </div>
+        <!-- /.container-fluid -->
+    </nav>
+    <h3>Messages:</h3>
+    <img class="chattywifit" src="ws1.jpg">
+    <img class="chattywifit" src="ws2.jpg">
+    <div id="messageArea">
+        <!-- populate with 5 messages on load event
 				include delete button with each message -->
-				<ul id="messages"></ul>
-		</div>
-		
+        <ul id="messages"></ul>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="javascripts/chatty.js"></script>
 </body>
+
 </html>
