@@ -8,4 +8,8 @@
   width: 400px;
   display: inline-block; }
 
+.dark{
+	background-color: dimgrey;
+	color: grey;
+}
 /*# sourceMappingURL=main.css.map */
