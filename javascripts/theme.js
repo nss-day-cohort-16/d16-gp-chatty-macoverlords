@@ -9,22 +9,12 @@ textLarge.addEventListener("click" , makeBig);
 
 function makeDark(event){
 	if(event){
-		body.style.backgroundColor="dimgrey";
-		nav.style.backgroundColor="black";
-		nav.style.color="white";
+		body.classList.toggle("foo")
 	}
-}
+};
 
 function makeBig(event){
 	 if(event){
-	 	body.style.fontSize="2em";
+	 	body.classList.toggle("fuh");
 	 }
 };
-
-
-  function a(){
-        this.classList.toggle('first');
-        this.classList.toggle('sec');
-    };
-document.getElementById("darkTheme").addEventListener('click', makeDark );
-document.querySelector('#darkTheme').addEventListener('click', a );
