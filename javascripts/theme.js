@@ -4,26 +4,24 @@ var body =document.getElementById("body");
 var textLarge = document.getElementById("largeText");
 var nav = document.getElementById("nav");
 
-// theme.addEventListener("click" , makeDark);
+theme.addEventListener("click" , makeDark);
 textLarge.addEventListener("click" , makeBig);
 
-// function makeDark(event){
-// 	if(event){
-// 		body.style.backgroundColor="dimgrey";
-// 		nav.style.backgroundColor="black";
-// 		nav.style.color="white";
-// 	}
-// }
+function makeDark(event){
+	if(event){
+		body.style.backgroundColor="dimgrey";
+		nav.style.backgroundColor="black";
+		nav.style.color="white";
+	}
+	else if(event){
+		body.style.backgroundColor="white";
+		nav.style.backgroundColor="white";
+		nav.style.color="black";
+	}	
+}
 
 function makeBig(event){
-	 this.classList.toggle('first');
-     this.classList.toggle('sec');
+	 if(event){
+	 	body.style.fontSize="2em";
+	 }
 };
-
-
-  function a(){
-        this.classList.toggle('first');
-        this.classList.toggle('sec');
-    };
-document.querySelector('#darkTheme').addEventListener('click', a );
-document.querySelector('#darkTheme').addEventListener('click', a );
