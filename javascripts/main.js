@@ -3,20 +3,19 @@
 var Chatty = (function(oldChatty) {
     var newMessage = [];
 
-    return {
-        returnMsg: function(messages) {
+            oldChatty.returnMsg = function(messages) {
+            console.log("messages",messages);
             messages.forEach(function (item) { 
-            document.getElementById("messages").innerHTML += "<li>" + item.message + "<button class='delete'>" + "Delete" + "</button></li>";
+            console.log("item",item );
+            var x = document.getElementById("messages");
+            x.innerHTML += "<li>" + item + "<button class='delete'>Delete</button></li>";
             });
-        }    
-    
-    };
-    console.log("old",oldChatty);
 
+    };
     return oldChatty;
 })(Chatty || {});
 
-// Chatty.loadMessages(returnMsg);
+Chatty.loadMessages(Chatty.returnMsg);
 
 console.log("secondChatt",Chatty);
 
