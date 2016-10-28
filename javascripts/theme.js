@@ -1,5 +1,4 @@
 "use strict";
-
 var theme = document.getElementById("darkTheme");
 var body =document.getElementById("body");
 var textLarge = document.getElementById("largeText");
@@ -10,12 +9,12 @@ textLarge.addEventListener("click" , makeBig);
 
 function makeDark(event){
     if(event){
-        body.classList.toggle("foo");
+        body.classList.toggle("foo")
     }
 };
 
 function makeBig(event){
      if(event){
-         body.classList.toggle("fuh");
+         body.classList.toggle("fuh")
      }
 };
