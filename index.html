@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatty</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
@@ -15,12 +15,12 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                  <!--   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
                         <span class="sr-only">Toggle navigation</span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
                         <span class="icon-bar"></span>
-                    </button>
+                    </button> -->
                     <a class="navbar-brand" href="#">Brand</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -28,7 +28,6 @@
                     <!-- <form class="navbar-form navbar-left"> -->
                         <div class="form-group">
                             <input id="messageField" type="text" name="message" placeholder="Get Chatty" size="100"> </div>
-                        <button id="submit" type="submit" class="btn btn-default">Submit</button>
                         <button class="clear-messages btn btn-default" id="clearBtn">Clear Message Board</button>
                     <!-- </form> -->
                     <div id="themesBox">
@@ -46,18 +45,20 @@
         </div>
     </nav>
     <h3>Messages:</h3>
-    <img class="chattywifit" src="images/ws1.jpg">
-    <img class="chattywifit" src="images/ws2.jpg">
+    <!-- <img class="chattywifit" src="images/ws1.jpg">
+    <img class="chattywifit" src="images/ws2.jpg"> -->
     <div id="messageArea">
         <!-- populate with 5 messages on load event
 				include delete button with each message -->
         <ul id="messages"></ul>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
     <script src="javascripts/chatty.js"></script>
-    <script src="javascripts/main.js"></script>
+    <script src="javascripts/returnRemove.js"></script>
+    <script src="javascripts/lastChatty.js"></script>
+    <script src="javascripts/DOMHandlers.js"></script>
     <script src="javascripts/theme.js"></script>
-    <script src="javascripts/nick.js"></script>
+    <!-- <script src="javascripts/nick.js"></script> -->
 </body>
 
 </html>
