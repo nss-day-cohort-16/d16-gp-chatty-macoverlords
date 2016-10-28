@@ -4,6 +4,7 @@
 document.querySelector("body").addEventListener("click", function(event) {
  
  if (event.target.className === "delete") {
+ 	console.log("event.target.parentNode",event.target.parentNode);
     Chatty.removeMsg(event.target.parentNode);
 
   }
