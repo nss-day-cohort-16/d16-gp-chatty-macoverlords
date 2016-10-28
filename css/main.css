@@ -9,3 +9,12 @@
   display: inline-block; }
 
 /*# sourceMappingURL=main.css.map */
+
+.foo{
+    background-color:dimgrey;
+    color: white;
+}
+
+.fuh{
+    font-size:1.5em;
+}
