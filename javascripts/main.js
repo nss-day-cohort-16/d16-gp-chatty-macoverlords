@@ -3,13 +3,13 @@
 var Chatty = (function(oldChatty) {
     var newMessage = [];
 
-            oldChatty.returnMsg = function(messages) {
-            console.log("messages",messages);
-            messages.forEach(function (item) { 
-            console.log("item",item );
+    oldChatty.returnMsg = function(messages) {
+        // console.log("messages", messages);
+        messages.forEach(function(item) {
+            // console.log("item", item);
             var x = document.getElementById("messages");
             x.innerHTML += "<li>" + item + "<button class='delete'>Delete</button></li>";
-            });
+        });
 
     };
     return oldChatty;
@@ -17,9 +17,4 @@ var Chatty = (function(oldChatty) {
 
 Chatty.loadMessages(Chatty.returnMsg);
 
-console.log("secondChatt",Chatty);
-
-
-
-
-
+// console.log("secondChatt", Chatty);
