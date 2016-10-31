@@ -1,7 +1,10 @@
 body {
   background:url("http://image.shutterstock.com/z/stock-vector-graffiti-spray-paint-expressive-street-crazy-dance-show-words-design-seamless-colorful-pattern-207438037.jpg");
   background-repeat:no-repeat;
+  font-size: 3em;
 }
+
+
 #nav {
   max-height: 200px;
   width: 60%;
@@ -9,15 +12,37 @@ body {
   margin-right: 20%;
   display: inline-block; 
   background-color: #F8FFFD;
-     -moz-box-shadow:    0 0 0 10px #000000;
-   -webkit-box-shadow: 0 0 0 10px #000000;
-   box-shadow:         00 0 10px #000000;
+  -moz-box-shadow:    0 0 0 10px #000000;
+  -webkit-box-shadow: 0 0 0 10px #000000;
+  box-shadow: 00 0 10px #000000;
 }
 
-  #wrapper{
+#messageField {
+  width:100%;
+}
+
+  #messageArea{
+    margin-top: 10%;
+    width:60%;
+    margin-left: 20%;
+    margin-right: 20%;
+      -moz-box-shadow:    inset 0 0 10px #000000;
+   -webkit-box-shadow: inset 0 0 10px #000000;
+   box-shadow:         inset 0 0 10px #000000;
+
+    }
+
+    .normal{
     border: solid 1px #BAFFF5;
     border-radius: 20px;
     background-color: #ABFFED;
+    font-size: 3em
+    }
+
+      .makeDark{
+    border: solid 1px #42635E;
+    border-radius: 20px;
+    background-color: #42635E;
     margin-top: 10%;
     width:60%;
     margin-left: 20%;
@@ -27,6 +52,15 @@ body {
    box-shadow:         inset 0 0 10px #000000;
 
       }
+
+      .regText{
+  font-size: 1em;
+}
+
+.fuh {
+  font-size:2em;
+}
+
 
   #themesBox{
     margin-left: 20%
@@ -153,15 +187,15 @@ border-radius: 40px;
   right: 0;
   bottom: 0;
 }
+
+
 /*.foo{
 	background-color:dimgrey;
 	color: white;
   height:100%;
 }
 
-.fuh{
-	font-size:1.5em;
-}
+
 
 .fus{
   width:100%;
@@ -180,3 +214,4 @@ border-radius: 40px;
   margin-left:100px
   display:block;
 }
+
