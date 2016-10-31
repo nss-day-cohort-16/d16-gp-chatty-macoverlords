@@ -8,7 +8,6 @@ var Chatty = (function() {
             loader.send();
             loader.addEventListener("load", function() {
                 messages = JSON.parse(this.responseText).messages;
-                // console.log("messages",messages);
                 callBack(messages);
             });
         },
@@ -19,4 +18,4 @@ var Chatty = (function() {
         }
     };
 })();
-// console.log("chatty", Chatty);
+

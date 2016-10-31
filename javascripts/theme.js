@@ -2,7 +2,7 @@
 var theme = document.getElementById("darkTheme");
 var body =document.getElementById("body");
 var textLarge = document.getElementById("largeText");
-var nav = document.getElementById("nav");
+var nav = document.getElementsByClassName("nav");
 var wrapper = document.getElementById("messageArea");
 var messages = document.getElementById("messages");
 console.log("wrapper" , wrapper);
@@ -15,14 +15,14 @@ console.log("click" , event);
     if(event.target === theme){
     	console.log("here?", wrapper , wrapper.classList)
         wrapper.classList.toggle("makeDark");
+        nav.classList.toggle("nav2");
     }
 };
 
 function makeBig(event){
-     // if(event.target === textLarge){
       if(event) {
-     	// console.log("click")
          messages.classList.toggle("fuh");
+         
      }
 };
 

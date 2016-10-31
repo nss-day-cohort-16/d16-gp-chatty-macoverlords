@@ -22,7 +22,6 @@ var output = document.getElementById("messageField");
 output.addEventListener("keypress", function(event) {
     var key = event.which || event.keyCode;
     if (key === 13) {
-        // console.log("enter", event);
         Chatty.showMsg();
         output.value = "";
     }
