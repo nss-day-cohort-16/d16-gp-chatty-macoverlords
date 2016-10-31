@@ -1,20 +1,60 @@
+* {
+  outline: none;
+}
+
+/*FONTS*/
+@font-face {
+  font-family: 'the-fresh-prince';
+  src: url('the-fresh-prince.otf');
+}
+
+h1 {
+  font-family: the-fresh-prince;
+  font-size: 10em;
+  color: #FA4D01;
+  margin: 0;
+  text-shadow: 0 0 30px #FF77E6;
+  font-weight: 100;
+}
+
+h3 {
+  font-size: .5em;
+}
+
+.nick {
+  animation-name: nick;
+  animation-duration: 100ms;
+  animation-iteration-count: infinite;
+}
+
+@keyframes nick {
+    from {background-color: white;}
+    to {background-color: black;}
+    from {color: black;}
+    to {color: white;}
+}
+
 body {
   background:url("http://image.shutterstock.com/z/stock-vector-graffiti-spray-paint-expressive-street-crazy-dance-show-words-design-seamless-colorful-pattern-207438037.jpg");
   background-repeat:no-repeat;
-  font-size: 3em;
+  /*font-size: 3em;*/
 }
 
 
 #nav {
-  max-height: 200px;
+  max-height: 300px;
   width: 60%;
   margin-left: 20%;
   margin-right: 20%;
-  display: inline-block; 
+  display: inline-block;
   background-color: #F8FFFD;
   -moz-box-shadow:    0 0 0 10px #000000;
   -webkit-box-shadow: 0 0 0 10px #000000;
   box-shadow: 00 0 10px #000000;
+   border: solid 1px #BAFFF5;
+    border-radius: 20px;
+    background-color: #ABFFED;
+    /*font-size: 3em*/
 }
 
 #messageField {
@@ -22,10 +62,11 @@ body {
 }
 
   #messageArea{
-    margin-top: 10%;
+    margin-top: 15%;
     width:60%;
     margin-left: 20%;
     margin-right: 20%;
+
       -moz-box-shadow:    inset 0 0 10px #000000;
    -webkit-box-shadow: inset 0 0 10px #000000;
    box-shadow:         inset 0 0 10px #000000;
@@ -61,9 +102,9 @@ body {
   font-size:2em;
 }
 
-
   #themesBox{
     margin-left: 20%
+    /*font-size: 5em;*/
   }
 
   #outputMsg{
@@ -88,7 +129,7 @@ body {
 list-style:none;
 }
 #messages li {
-font-size:15px;
+font-size: .5em;
 font-family: 'Raleway', sans-serif;
 display:block;
 width:75%;
@@ -104,9 +145,10 @@ color:#F8FFFE;
 margin-bottom: 7px;
 transition: all .2s ease-in-out;
 opacity:0.75;
-text-align: center; 
+text-align: center;
 border-radius: 40px;
 }
+
 #messages li:hover {
 -moz-transform:rotate(1deg);
 -moz-box-shadow:10px 10px 20px #000000;
@@ -131,7 +173,7 @@ border-radius: 40px;
   transition: all 0.4s ease-out 0s;
   border: 2px solid #9c2020;
   font-family: "century gothic", sans-serif;
-  font-size: .75em;
+  font-weight: size: .75em;
   padding: 3px 6px;
   color: #831b1b;
   text-shadow: 0 0 3px #e85454, 0px 1px 2px #ff8989;
@@ -215,3 +257,14 @@ border-radius: 40px;
   display:block;
 }
 
+.form-group {
+  margin: 0;
+  padding: 0;
+}
+
+
+.check {
+  border: 1px solid black;
+  height: 10px;
+  width: 10px;
+}
