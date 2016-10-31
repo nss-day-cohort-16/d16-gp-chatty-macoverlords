@@ -4,23 +4,18 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatty</title>
-    <!-- <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous"> -->
     <link rel="stylesheet" type="text/css" href="css/main.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
 </head>
 
-<body id="body">
+<body>
+
     <!-- make navBar sticky -->
     <nav class="navbar navbar-default navbar-fixed-top" id="nav">
         <div id="navBar">
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                  <!--   <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                        <span class="sr-only">Toggle navigation</span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button> -->
                     <a class="navbar-brand" href="#">Brand</a>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
@@ -32,10 +27,10 @@
                     <!-- </form> -->
                     <div id="themesBox">
                         <!-- toggle with classList -->
-                        </br>
-                        </br>
+                        
+                        
                         <input id="darkTheme" type="checkbox">Dark Theme
-                        </br>
+                        
                         <input id="largeText" type="checkbox">Large Text
                     </div>
                 </div>
@@ -44,15 +39,17 @@
             <!-- /.container-fluid -->
         </div>
     </nav>
-    <h3>Messages:</h3>
-    <!-- <img class="chattywifit" src="images/ws1.jpg">
-    <img class="chattywifit" src="images/ws2.jpg"> -->
+    <div id="wrapper">
+    <h3 id="outputMsg">Messages</h3>
+  <!--   <img class="chattywifit" src="images/ws1.jpg" id="will1">
+    <img class="chattywifit" src="images/ws2.jpg" id="will2"> -->
     <div id="messageArea">
         <!-- populate with 5 messages on load event
 				include delete button with each message -->
         <ul id="messages"></ul>
     </div>
-    <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script> -->
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
     <script src="javascripts/chatty.js"></script>
     <script src="javascripts/returnRemove.js"></script>
     <script src="javascripts/lastChatty.js"></script>
