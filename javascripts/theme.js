@@ -4,6 +4,7 @@ var body =document.getElementById("body");
 var textLarge = document.getElementById("largeText");
 var nav = document.getElementById("nav");
 var wrapper = document.getElementById("messageArea");
+var messages = document.getElementById("messages");
 console.log("wrapper" , wrapper);
 
 theme.addEventListener("click" , makeDark);
@@ -18,11 +19,16 @@ console.log("click" , event);
 };
 
 function makeBig(event){
-     if(event.target === textLarge){
-     	console.log("click")
-         wrapper.classList.toggle("fuh")
-         
-         
+     // if(event.target === textLarge){
+      if(event) {
+     	// console.log("click")
+         messages.classList.toggle("fuh");
      }
 };
 
+seizure.addEventListener("click", seizure1);
+function seizure1(event) {
+  if(event) {
+    wrapper.classList.toggle("nick");
+  }
+};

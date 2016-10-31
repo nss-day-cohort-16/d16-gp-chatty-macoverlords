@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatty</title>
-    
+
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
@@ -17,7 +17,8 @@
             <div class="container-fluid">
                 <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                    <a class="navbar-brand" href="#">Brand</a>
+                <!-- <img class="chattywifit" src="images/willsmith1.jpg"> -->
+                    <h1>Gittin Chatty Wif it</h1>
                 </div>
                 <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
@@ -28,11 +29,12 @@
                     <!-- </form> -->
                     <div id="themesBox">
                         <!-- toggle with classList -->
-                        
-                        
-                        <input id="darkTheme" type="checkbox">Dark Theme
-                        
-                        <input id="largeText" type="checkbox">Large Text
+
+
+                        <input id="darkTheme" class="check" type="checkbox">Dark Theme
+                        <input id="largeText" class="check" type="checkbox">Large Text
+                        <input id="seizure" class="check" type="checkbox"> Seizure
+
                     </div>
                 </div>
                 <!-- /.navbar-collapse -->
@@ -44,7 +46,7 @@
     <h3 id="outputMsg">Messages</h3>
   <!--   <img class="chattywifit" src="images/ws1.jpg" id="will1">
     <img class="chattywifit" src="images/ws2.jpg" id="will2"> -->
-    
+
         <!-- populate with 5 messages on load event
 				include delete button with each message -->
         <ul id="messages"></ul>
