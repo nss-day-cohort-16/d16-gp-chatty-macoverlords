@@ -15,7 +15,6 @@ console.log("click" , event);
     if(event.target === theme){
     	console.log("here?", wrapper , wrapper.classList)
         wrapper.classList.toggle("makeDark");
-        nav.classList.toggle("nav2");
     }
 };
 
