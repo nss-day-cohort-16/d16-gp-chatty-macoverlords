@@ -11,10 +11,10 @@ var Chatty = (function() {
                 // console.log("messages",messages);
                 callBack(messages);
             });
-        },
-        getMessages: function() {
-            console.log("messages", messages);
-            return messages;
+        // },
+        // getMessages: function() {
+        //     console.log("messages", messages);
+        //     return messages;
 
         }
     };
