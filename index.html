@@ -4,48 +4,32 @@
 <head>
     <meta charset="UTF-8">
     <title>Chatty</title>
-
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="css/main.css">
 </head>
 
 <body id="body" class="regText">
-
-    <!-- make navBar sticky -->
     <nav class="navbar navbar-default navbar-fixed-top" id="nav">
         <div id="navBar">
             <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
                 <div class="navbar-header">
-                <!-- <img class="chattywifit" src="images/willsmith1.jpg"> -->
                     <h1>Gittin Chatty Wif it</h1>
                 </div>
-                <!-- Collect the nav links, forms, and other content for toggling -->
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <!-- <form class="navbar-form navbar-left"> -->
                         <div class="form-group">
                             <input id="messageField" type="text" name="message" placeholder="Get Chatty" > </div>
                         <button class="clear-messages btn btn-default" id="clearBtn">Clear Message Board</button>
-                    <!-- </form> -->
                     <div class="themesBox">
-                        <!-- toggle with classList -->
                         <input id="darkTheme" type="checkbox"> Dark Theme
                         <input id="largeText" type="checkbox"> Large Text
                         <input id="seizure" type="checkbox"> Seizure
                     </div>
                 </div>
-                <!-- /.navbar-collapse -->
             </div>
-            <!-- /.container-fluid -->
         </div>
     </nav>
     <div id="messageArea" class="normal">
     <h3 id="outputMsg">Messages</h3>
-  <!--   <img class="chattywifit" src="images/ws1.jpg" id="will1">
-    <img class="chattywifit" src="images/ws2.jpg" id="will2"> -->
-
-        <!-- populate with 5 messages on load event
-				include delete button with each message -->
         <ul id="messages"></ul>
     </div>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
@@ -54,7 +38,5 @@
     <script src="javascripts/lastChatty.js"></script>
     <script src="javascripts/DOMHandlers.js"></script>
     <script src="javascripts/theme.js"></script>
-    <!-- <script src="javascripts/nick.js"></script> -->
 </body>
-
 </html>

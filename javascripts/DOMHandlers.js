@@ -1,29 +1,39 @@
 "use strict";
 /*DOM LISTENERS*/
 
-document.body.addEventListener("click", function(event) {
+$(document).ready(function(){
 
-    if (event.target.className === "delete") {
-        var msgToDeleteId = event.target.id;
-        Chatty.removeMsg(event.target.parentNode, msgToDeleteId);
+    $("#darkTheme").click(function () {
+        $("#messageArea").toggleClass("makeDark");
+    });
 
-    }
+    $("#largeText").click(function () {
+        $("#messageArea").toggleClass("fuh");
+    });
 
-    if (event.target.id === "clearBtn") {
-        var listMsg = document.getElementsByClassName("listMsg");
-        while (listMsg.length > 0) {
-            listMsg[0].parentNode.removeChild(listMsg[0]);
-            output.value = "";
-        }
+    $("#seizure").click(function () {
+        $("#messageArea").toggleClass("nick");
+    });
+
+    $("#clearBtn").click(function() {
+     $("li").remove();
+    });
+
+    $(document).on('click','.delete',function() {
+        $(this).closest("li").remove();
+    });
+
+    });
+
+    $("#messageField").keypress(function(e) {
+        if(e.which === 13) {
+        Chatty.showMsg($("#messageField").val());
+        $("#messageField").val('');
     }
 });
 
-var output = document.getElementById("messageField");
-output.addEventListener("keypress", function(event) {
-    var key = event.which || event.keyCode;
-    if (key === 13) {
-        // console.log("enter", event);
-        Chatty.showMsg();
-        output.value = "";
-    }
-});
+
+
+
+
+
