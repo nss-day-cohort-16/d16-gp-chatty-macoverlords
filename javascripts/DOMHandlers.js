@@ -1,5 +1,4 @@
 "use strict";
-/*DOM LISTENERS*/
 
 $(document).ready(function(){
 

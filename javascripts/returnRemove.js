@@ -7,7 +7,6 @@ var Chatty = (function(oldChatty) {
     oldChatty.returnMsg = function(messages) {
        
                 $.each(messages.messages,function(index, item) {
-                console.log(item);
                 Chatty.showMsg(item);
                  });
         };
