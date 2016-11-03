@@ -1,4 +1,5 @@
 "use strict";
+/* jshint -W079 */
 
 var Chatty = (function(oldChatty) {
     var newMessage = [];
@@ -7,7 +8,7 @@ var Chatty = (function(oldChatty) {
     oldChatty.returnMsg = function(messages, id) {
         newMessage = messages.concat(newMessage);
         messages.forEach(function(item) {
-            counter++
+            counter++;
             id = document.getElementById("messages");
             var deleteBtn = `<button class='delete' id='${counter}'>Delete</button>`;
             id.innerHTML += "<li class='listMsg'>" + item + deleteBtn + "</li>";
