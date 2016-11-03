@@ -1,7 +1,7 @@
 "use strict";
-// Supressing JShint errors
+// Supressing JShint Errors
 /* jshint -W097 */    // use strict within function only error
-/* jshint -W079 */   //  redefintion of global variable. trips with loose augementation iife's
+/* jshint -W079 */   //  redefintion of global variable. trips with resetting iife's
 
 var Chatty = (() => {
   let messages = [];
