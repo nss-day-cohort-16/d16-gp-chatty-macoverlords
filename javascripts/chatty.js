@@ -1,4 +1,6 @@
 "use strict";
+/* jshint -W079 */
+
 var Chatty = (function() {
     var messages = [];
     return {

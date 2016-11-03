@@ -1,3 +1,7 @@
+Below is the original group project requirements for a Nashville Software School group project. The follow-up was to choose code from another team and convert as much as we could to jquery and ES6.
+
+-Nathan T. Baker
+
 # Chatty Group Project
 
 ## Setup
