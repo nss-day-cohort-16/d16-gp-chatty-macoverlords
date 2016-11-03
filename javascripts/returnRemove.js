@@ -1,32 +1,30 @@
 "use strict";
-/* jshint -W079 */
+// Supressing JShint Errors
+/* jshint -W097 */    // use strict within function only error
+/* jshint -W079 */   //  redefintion of global variable. trips with resetting iife's
 
-var Chatty = (function(oldChatty) {
-    var newMessage = [];
-    var counter = -1;
+var Chatty = (oldChatty => {
+  let newMessage = [],
+      counter = -1;
 
-    oldChatty.returnMsg = function(messages, id) {
-        newMessage = messages.concat(newMessage);
-        messages.forEach(function(item) {
-            counter++;
-            id = document.getElementById("messages");
-            var deleteBtn = `<button class='delete' id='${counter}'>Delete</button>`;
-            id.innerHTML += "<li class='listMsg'>" + item + deleteBtn + "</li>";
-        });
-        oldChatty.showMsg = function(userMsg, id) {
-            userMsg = document.getElementById("messageField").value;
-            newMessage.push(userMsg);
-            id = document.getElementById("messages");
-            id.innerHTML += `<li class='listMsg'>${userMsg}<button class='delete' id='${counter}'>Delete</button></li>`;
-            userMsg = "";
-            console.log("newMessage", newMessage);
-        };
-        oldChatty.returnAllMsg = function() {
-            console.log("newMessage in returnAll", newMessage);
-            return newMessage;
-        };
+  oldChatty.returnMsg = messages => {
+    newMessage = messages.concat(newMessage);
+    messages.forEach(item => {
+      counter++;
+      $("#messages").prepend(`<li class='listMsg'>${item}<button class='delete' id='${counter}'>Delete</button></li>`);
+    });
+
+    oldChatty.showMsg = id => {
+      let userMsg = $("#messageField").val();
+      newMessage.push(userMsg);
+      $("#messages").append(`<li class='listMsg'>${userMsg}<button class='delete' id='${counter}'>Delete</button></li>`);
+      userMsg = "";
     };
-    return oldChatty;
+
+    oldChatty.returnAllMsg = () => newMessage;
+
+  };
+  return oldChatty;
 })(Chatty || {});
 
 Chatty.loadMessages(Chatty.returnMsg);
