@@ -7,6 +7,7 @@ var Chatty = (oldChatty => {
   let newMessage = [],
       counter = -1;
 
+  // builds inital messages on page
   oldChatty.returnMsg = messages => {
     newMessage = messages.concat(newMessage);
     messages.forEach(item => {
@@ -14,6 +15,7 @@ var Chatty = (oldChatty => {
       $("#messages").prepend(`<li class='listMsg'>${item}<button class='delete' id='${counter}'>Delete</button></li>`);
     });
 
+    // creates need message based on id
     oldChatty.showMsg = id => {
       let userMsg = $("#messageField").val();
       newMessage.push(userMsg);
