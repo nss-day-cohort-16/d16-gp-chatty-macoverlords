@@ -3,7 +3,7 @@
 /* jshint -W097 */      // use strict within function only error
 
 
-document.body.addEventListener("click", event => {
+$("body").click( event => {
 
   if (event.target.className === "delete") {
     var msgToDeleteId = event.target.id;
