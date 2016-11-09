@@ -1,22 +1,16 @@
 "use strict";
-var Chatty = (function() {
-    var messages = [];
-    return {
-        loadMessages: function(callBack) {
-            var loader = new XMLHttpRequest();
-            loader.open("GET", "data/messages.json");
-            loader.send();
-            loader.addEventListener("load", function() {
-                messages = JSON.parse(this.responseText).messages;
-                // console.log("messages",messages);
-                callBack(messages);
-            });
-        },
-        getMessages: function() {
-            console.log("messages", messages);
-            return messages;
+// Supressing JShint Errors
+/* jshint -W097 */    // use strict within function only error
+/* jshint -W079 */   //  redefintion of global variable. trips with resetting iife's
 
-        }
-    };
+var Chatty = (() => {
+  let messages = [];
+  return {
+    getMessages: () => messages,
+    loadMessages: callBack => {
+      $.ajax({url: "data/messages.json"}).done(data => {
+        messages = data.messages;
+        callBack(messages); // passed loaded JSON data to callback function
+      });}
+  };
 })();
-// console.log("chatty", Chatty);

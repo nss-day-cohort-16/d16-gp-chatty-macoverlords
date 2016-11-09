@@ -1,21 +1,14 @@
 "use strict";
+// Supressing JShint errors
+/* jshint -W097 */      // use strict within function only error
+/* jshint -W079 */   //  redefintion of global variable. trips with resetting iife's
 
-var Chatty = (function(oldChatty) {
-    oldChatty.removeMsg = function(dM, dMiD) {
-        var msgArray = Chatty.returnAllMsg();
-        var itemSpliced = msgArray.splice(dMiD, 1);
-        console.log("msgArray", msgArray);
-        console.log("itemSpliced", itemSpliced);
+var Chatty = (oldChatty => {
+    // take message element and id and delete message from DOM and array
+    oldChatty.removeMsg = (dM, dMiD) => {
+        let msgArray = Chatty.returnAllMsg(),
+            itemSpliced = msgArray.splice(dMiD, 1);
         dM.remove();
-
-        // var i = 0;
-        // for (var item in msgArray) {
-        //     i = Object.keys(msgArray).indexOf(item);
-        //     // console.log("i in removeMsg", i);
-        //     // break;
-        // }
-        // msgArray.splice(i, 1);
     };
     return oldChatty;
 })(Chatty || {});
-
