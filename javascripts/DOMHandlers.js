@@ -23,7 +23,10 @@ output.addEventListener("keypress", function(event) {
     var key = event.which || event.keyCode;
     if (key === 13) {
         // console.log("enter", event);
-        Chatty.showMsg();
+        var userMsg = document.getElementById("messageField").value;
+        var id = document.getElementById("messages");
+
+        Chatty.showMsg(userMsg, id);
         output.value = "";
     }
 });
